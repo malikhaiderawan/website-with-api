@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}FEEDBACK{% endblock title %}
+{% block body %} <div class="container-fluid my=4 px-4 ">
+
+    <img src="/static/picc.jpg"width='80%' height='750' class="rounded float-end" alt="...">
+        <form method='post' action='/feedback'>
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="xyz" class="form-label">*USER NAME:</label>
+                <br><input type="user name" name='name' id="xyz">
+              </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">*Email Address:</label>
+              <br><input type="email"  id="exampleInputEmail1" name='email' aria-describedby="emailHelp">
+              <div id="emailHelp" >We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">*PHONE NUMBER:</label>
+              <br><input type="phonenumber" name='phone' id="exampleInputPassword1">
+            </div>
+            <div class="btn-group"> <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="inside" aria-expanded="false"> RATING </button> <ul class="dropdown-menu"> <li><a class="dropdown-item" href="#">*</a></li> <li><a class="dropdown-item" href="#">**</a></li> <li><a class="dropdown-item" href="#">***</a></li> <li><a class="dropdown-item" href="#">****</a></li> <li><a class="dropdown-item" href="#">*****</a></li> </ul> </div>
+
+
+  <div class=" my-4 mb-4">
+    <label for="exampleInputPassword1" class="form-label">*HOW'S OUR TASTE:</label>
+    <br><input type="text"  class='textbox' name='taste' id="exampleInputPassword1">
+  </div>
+  <div class=" my-4 mb-4">
+    <label for="exampleInputPassword1" class="form-label">*WHAT'S TO ADDNEW :</label>
+    <br><input type="text"  class='textbox' name='whatsnew' id="exampleInputPassword1">
+  </div>
+            <div class=" my-4 mb-4">
+                <label for="exampleInputPassword1" class="form-label">*WHAT'S TO CHANGE:</label>
+                <br><input type="text"  class='textbox' name='change' id="exampleInputPassword1">
+              </div>
+
+
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <div class="btn-group mb-4" > <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="inside" aria-expanded="false"> <I>HOWS URS EXPERIENCE: </button> <ul class="dropdown-menu"> <li><a class="dropdown-item" href="#">GOOD</a></li> <li><a class="dropdown-item" href="#">NORMAL</a></li> <li><a class="dropdown-item" href="#">EXCENLENT</a></li> <li><a class="dropdown-item" href="#">BAD</a></li> <li><a class="dropdown-item" href="#">VERY BAD</a></li> </ul> </div>
+            
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form><br>
+
+          <br><h3 my-2 class='text-center'> <B><I><U>THANK UH FOR VISITING US!</H3>
+
+{% endblock body %}

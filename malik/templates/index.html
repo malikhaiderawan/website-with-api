@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% block title %}HOME{% endblock title %}
+{% block body %}<div class="container-fluid my-4 px-4 ">
+
+<img src="/static/p5.jpg" class="rounded mx-auto d-block" width='93%' height='450' class="rounded float-end" alt="...">
+<br><h2 class='text-center my-3'><b><U><i> ORDER WHAT UH WANT </h2></U>
+<div class="container">
+  <form method='post' action='/home'>
+    {% csrf_token %}
+
+    <div class="input-group mb-3">
+  <span class="input-group-text" id="inputGroup-sizing-default">NAME:</span>
+  <input type="text" class="form-control" name='name' aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+
+
+</div>
+
+    <div class="input-group mb-4">
+  <span class="input-group-text" id="inputGroup-sizing-default">PHONE NO:</span>
+  <input type="text" class="form-control" name='phone' aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+ <div class="input-group mb-4">
+  <span class="input-group-text" id="inputGroup-sizing-default">Address:</span>
+  <input type="text" class="form-control" name='address' aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+
+
+   <div class="btn-group">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="inside" aria-expanded="false">
+      CITY/STATE
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">LAHORE<a></li>
+      <li><a class="dropdown-item" href="#">ISLAMABAD</a></li>
+      <li><a class="dropdown-item" href="#">FAISALABAD</a></li>
+      <li><a class="dropdown-item" href="#">KARACHI</a></li>
+      <li><a class="dropdown-item" href="#">SAHIWAL</a></li>
+    </ul>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+     <div class="input-group mb-4">
+  <span class="input-group-text" id="inputGroup-sizing-default">MAIN AREA:</span>
+  <input type="text" class="form-control" name='mainarea' aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      <div class="input-group mb-4">
+  <span class="input-group-text" id="inputGroup-sizing-default">SUB AREA:</span>
+  <input type="text" class="form-control" name='subarea' aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <div class="input-group mb-4">
+  <span class="input-group-text" id="inputGroup-sizing-default">STREET NO:</span>
+  <input type="text" class="form-control" name='streetno' aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+
+  </div><BR><BR>
+
+  <div class="btn-group">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="inside" aria-expanded="false">
+      TYPE OF ICE CREAME
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">CONE<a></li>
+      <li><a class="dropdown-item" href="#">CUP</a></li>
+      <li><a class="dropdown-item" href="#">BOX</a></li>
+      <li><a class="dropdown-item" href="#">JAR</a></li>
+
+    </ul>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+     <div class="input-group mb-4">
+  <span class="input-group-text" id="inputGroup-sizing-default">FLAVOUR:</span>
+  <input type="text" class="form-control" name='flavour' aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      <div class="input-group mb-4">
+  <span class="input-group-text" id="inputGroup-sizing-default">TOPPING:</span>
+  <input type="text" class="form-control" name='topping' aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <div class="input-group mb-4">
+  <span class="input-group-text" id="inputGroup-sizing-default">INSTRUCTION:</span>
+  <input type="text" class="form-control" name='instructions' aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+
+  </div>
+
+
+<BR><BR><button type="submit" class="btn btn-primary">Submit</button>
+
+</form>
+
+</div>
+
+
+
+</div>
+
+{% endblock body %}
